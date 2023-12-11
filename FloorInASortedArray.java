@@ -17,7 +17,7 @@ public class FloorInASortedArray
           return -1;
       }
 
-      if(x>arr[arr.length-1])
+      if(x>=arr[arr.length-1])
       {
 
           return arr[arr.length-1];
@@ -26,7 +26,7 @@ public class FloorInASortedArray
         for(int i=0;i<arr.length;i++)
         {
 
-            if(arr[i]<x)
+            if(arr[i]<=x)
             {
 
                 list.add(arr[i]);
@@ -39,7 +39,7 @@ public class FloorInASortedArray
         for(int j=0;j<list.size();j++)
         {
 
-            if(floor<list.get(j))
+            if(floor<=list.get(j))
             {
 
                 floor = list.get(j);
@@ -57,7 +57,7 @@ public class FloorInASortedArray
 
         Integer[] arr = {1, 2, 8, 10, 10, 12, 19};
 
-        int floor = floorSortedArray(arr,20);
+        int floor = floorSortedArray(arr,1);
 
         if(floor==-1)
         {
