@@ -12,7 +12,7 @@ public class ArrayDuplicateFinding2 {
 
         HashMap<Integer,Integer> map = new HashMap<>();
 
-        HashSet<Integer> set = new HashSet<>();
+        ArrayList<Integer> list = new ArrayList<>();
 
         for(int i=0;i<n;i++)
         {
@@ -21,8 +21,6 @@ public class ArrayDuplicateFinding2 {
             {
 
                 map.put(arr[i],map.get(arr[i])+1);
-
-                set.add(arr[i]);
             }
             else
             {
@@ -31,9 +29,26 @@ public class ArrayDuplicateFinding2 {
             }
         }
 
-        ArrayList<Integer> list = new ArrayList<>(set);
+        for(Map.Entry<Integer,Integer> m: map.entrySet())
+        {
 
-        return list;
+            if(m.getValue()>1)
+            {
+
+                list.add(m.getKey());
+            }
+
+        }
+
+   Collections.sort(list);
+
+    if(list.isEmpty())
+    {
+
+        list.add(-1);
+    }
+
+    return list;
 
     }
 
@@ -41,7 +56,7 @@ public class ArrayDuplicateFinding2 {
     public static void main(String[] args)
     {
 
-        int[] arr= {13,3,4,12,3,12,3,4,4,12,7,11,6,5};
+        int[] arr= {1,2,3,4,5,6};
 
         System.out.print("The array is:- ");
 
@@ -51,7 +66,9 @@ public class ArrayDuplicateFinding2 {
             System.out.print(i+" ");
         }
 
-        printArrayDuplicates(arr,arr.length);
+        ArrayList<Integer> list  = printArrayDuplicates(arr,arr.length);
+
+        System.out.println(list);
     }
 
 }
