@@ -2,42 +2,33 @@ package practiceprogramsforjavadsa;
 
 public class SearchInsertPositionInSortedArray {
 
-    public static void searchInsertPositionInASortedArray(int[] arr, int element) {
+    public static int searchInsertPositionInASortedArray(int Arr[], int N, int k) {
 
-        for (int i = 0; i < arr.length; i++) {
+        N = Arr.length;
 
-            if (arr[i] == element) {
+        for (int i = 0; i < N; i++) {
 
-                System.out.println("Element found at index "+i);
+            if (Arr[i] == k) {
 
-                return;
+                return i;
+            }
+            else if(Arr[i]>k)
+            {
+
+                return i;
             }
 
         }
 
-        for (int j = 1; j < arr.length - 1; j++) {
-
-            if (element > arr[j-1] && element < arr[j + 1]) {
-
-                System.out.println("Element can be present at index "+j);
-
-            }
-        }
-
-        if(element<arr[0] || element>arr[arr.length-1])
-        {
-
-            System.out.println("Element cannot be placed as it is out of bounds");
-        }
-
+        return Arr.length;
     }
 
         public static void main(String[]args)
         {
 
-            int[] arr = {1, 3, 5, 6};
+            int[] Arr = {1, 3, 5, 6};
 
-            searchInsertPositionInASortedArray(arr, 5);
+            searchInsertPositionInASortedArray(Arr,Arr.length,4);
         }
 
 

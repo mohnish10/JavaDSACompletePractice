@@ -6,30 +6,15 @@ public class SecondLargestNumberInAnArray
 {
     public static void sortArrayInDescendingOrder(int[] arr) {
 
-        for (int i = 0; i < arr.length; i++) {
+Arrays.sort(arr);
 
-            for (int j = i + 1; j < arr.length; j++) {
+System.out.print("Sorted Array:- ");
 
-                if (arr[i] < arr[j]) {
-
-                    int temp = arr[i];
-
-                    arr[i] = arr[j];
-
-                    arr[j] = temp;
-                }
-            }
-        }
-
-//        System.out.print("Sorted Array:- ");
-//
-//        for(int i:arr)
-//        {
-//
-//            System.out.print(i+" ");
-//        }
-//
-    }
+for(int i:arr)
+{
+System.out.print(i+" ");
+}
+}
 
     public static int secondLargestElement(int[] arr)
     {

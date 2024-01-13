@@ -5,12 +5,12 @@ import java.util.*;
 public class IntersectionOf2Arrays2
 {
 
-    public static int intersectionOf2Arrays(int[] a,int[] b,int m,int n)
+    public static int intersectionOf2Arrays(int[] a,int[] b)
     {
 
-        m=a.length;
+        int m=a.length;
 
-        n=b.length;
+        int n=b.length;
 
         ArrayList<Integer> list = new ArrayList<>();
 

@@ -59,7 +59,7 @@ public class NumberOfOccurrences
     public static void main(String[] args)
     {
 
-        Integer[] arr = {10,20,30,40,50,60,70,-1};
+        Integer[] arr = {1, 1, 2, 2, 2, 2, 3,};
 
         System.out.println("Original array is:- "+Arrays.toString(arr));
 

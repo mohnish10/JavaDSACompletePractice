@@ -29,8 +29,6 @@ public class Segregate0sand1s
 
         }
 
-        System.out.println("The count of 0s in the array arr is:- "+count);
-
         int[] arr1 = new int[arr.length];
 
         for(int i=0;i<count;i++)
