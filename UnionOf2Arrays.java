@@ -1,14 +1,14 @@
 package practiceprogramsforjavadsa;
 
 import java.util.Set;
-import java.util.LinkedHashSet;
+import java.util.TreeSet;
 
 public class UnionOf2Arrays
 {
     public static void arrayUnion(Integer[] arr,Integer[] arr1)
     {
 
-        Set<Integer> set = new LinkedHashSet<>();
+        Set<Integer> set = new TreeSet<>();
 
         for(int i=0;i<arr.length;i++)
         {
