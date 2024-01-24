@@ -6,14 +6,6 @@ public class SortAnArrayOf0s1sAnd2s
     public static void sortArrayOf0s1sAnd2s(int[] arr)
     {
 
-        System.out.print("Original array:- ");
-
-        for(int i:arr)
-        {
-
-            System.out.print(i+" ");
-        }
-
         int zeroCount=0,oneCount=0,twoCount=0;
 
         for(int i=0;i<arr.length;i++)

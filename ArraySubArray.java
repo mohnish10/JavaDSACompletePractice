@@ -19,8 +19,6 @@ public class ArraySubArray
 
                     System.out.print(arr[j]+" ");
 
-                    System.out.println();
-
                 }
 
             }

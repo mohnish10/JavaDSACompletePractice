@@ -20,17 +20,9 @@ public class Subsequence
         {
 
             if(A.charAt(i)==B.charAt(j))
-            {
+                i++;
+            j++;
 
-                i=i+1;
-
-                j=j+1;
-            }
-            else
-            {
-
-                j=j+1;
-            }
         }
 
         return i==n;
