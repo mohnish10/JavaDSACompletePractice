@@ -8,7 +8,7 @@ public class SumOfSubarraysMinimum
     public static int sumOfMinimumSubArrays(int[] arr)
     {
 
-         int sum = 0;
+        long sum = 0;
 
          for(int i=0;i<arr.length;i++)
          {
@@ -18,14 +18,14 @@ public class SumOfSubarraysMinimum
              for(int j=i;j<arr.length;j++)
              {
 
-                 minEle = Math.min(minEle,arr[j]);
+                 minEle = Math.min(arr[j],minEle);
 
                  sum += minEle;
              }
 
          }
 
-         return sum;
+         return (int) (sum % (Math.pow(10,9)+7));
 
     }
 
