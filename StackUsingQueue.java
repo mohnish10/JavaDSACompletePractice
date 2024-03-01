@@ -3,23 +3,35 @@ package practiceprogramsforjavadsa;
 import java.util.Queue;
 import java.util.LinkedList;
 
+
+
 public class StackUsingQueue
 {
 
     Queue<Integer> que = new LinkedList<>();
 
+    Queue<Integer> que1 = new LinkedList<>();
+
     public void push(int x)
     {
 
-        que.add(x);
+        que1.add(x);
 
-        for(int i=0;i<que.size();i++)
+        while(!que.isEmpty())
         {
 
-            int val = que.remove();
+            que1.add(que.peek());
 
-            que.add(val);
+            que.remove();
+
         }
+
+        Queue<Integer> q = que;
+
+        que = que1;
+
+        que1 = q;
+
     }
 
 
@@ -40,17 +52,12 @@ public class StackUsingQueue
 
     public int pop()
     {
-        int x = 0;
 
-        if(que.isEmpty()) return -1;
-        else
-        {
+        if(que.isEmpty()) { return -1; }
 
-            x = que.remove();
+        int x = que.remove();
 
-        }
-
-         return x;
+        return x;
     }
 
 
@@ -79,14 +86,9 @@ public class StackUsingQueue
 
         System.out.println(suq.pop());
 
-        System.out.println(suq.top());
-
         System.out.println(suq.pop());
 
         System.out.println(suq.top());
-
-        System.out.println(suq.toString());
-
 
 
 
