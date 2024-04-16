@@ -6,8 +6,7 @@ import java.util.Collections;
 public class FindTheRowWithMaximum1s
 {
 
-    public static void findTheRowWithMax1s(int[][]arr)
-    {
+    public static void findTheRowWithMax1s(int[][]arr) {
 
         int ans = -1;
 
@@ -15,29 +14,33 @@ public class FindTheRowWithMaximum1s
 
         int n = arr[0].length;
 
-        HashMap<Integer,Integer> map = new HashMap<>();
+        HashMap<Integer, Integer> map = new HashMap<>();
 
-        for(int i=0;i<n;i++)
-       {
+        for (int i = 0; i < n; i++) {
 
-           ans = rowWith1s(arr[i]);
+            ans = rowWith1s(arr[i]);
 
-           if(ans==-1) continue;
-           else map.put(i,ans);
+            if (ans == -1) continue;
+            else map.put(i, ans);
 
-       }
+        }
 
-        int max = Collections.max(map.values());
+        if (map.isEmpty()) {
+            System.out.println(-1);
 
-        for(int i=0;i<map.size();i++)
-        {
+        } else {
 
-            if(map.get(i)==max)
-            {
+            int max = Collections.max(map.values());
 
-                System.out.println(i);
+            for (int i = 0; i < map.size(); i++) {
 
-                break;
+                if (map.get(i) == max) {
+
+                    System.out.println(i);
+
+                    break;
+                }
+
             }
 
         }
@@ -74,7 +77,7 @@ public class FindTheRowWithMaximum1s
     public static void main(String[] args)
     {
 
-        int[][] arr = {{1,1,1},{0,0,1},{1,1,1,1}};
+        int[][] arr = {{0,0,0},{0,0,0},{0,0,0,0}};
 
         findTheRowWithMax1s(arr);
 
